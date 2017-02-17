@@ -11,6 +11,7 @@ SRC_URI = " \
 	file://boot.ini \
 	file://u-boot.bin \
 	file://bl1.bin.hardkernel \
+	file://uInitrd \
 	"
 
 inherit deploy
@@ -26,6 +27,7 @@ do_deploy () {
     install -m 755  ${S}/boot.ini ${DEPLOYDIR}
     install -m 755  ${S}/bl1.bin.hardkernel ${DEPLOYDIR}
     install -m 755  ${S}/u-boot.bin ${DEPLOYDIR}
+    install -m 755  ${S}/uInitrd ${DEPLOYDIR}
 }
 
 addtask deploy before do_build after do_compile
