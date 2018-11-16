@@ -32,5 +32,5 @@ do_deploy () {
 
 addtask deploy before do_build after do_compile
 
-COMPATIBLE_MACHINE = "(odroid-c2)"
+COMPATIBLE_MACHINE = "(odroid-c2|odroid-c2-hardkernel)"
 UBOOT_MACHINE_odroid-c2 = "odroidc2_config"

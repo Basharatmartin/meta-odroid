@@ -3,21 +3,22 @@ require recipes-kernel/linux/linux-yocto.inc
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
 
-KBRANCH ?= "odroidc2-3.14.y"
-#SRCREV ?= "6ad167426fbad87ff62af517fc01ad9655a89e18"
-#SRCREV ?= "1b4fefdf20a84b17d5b666c0686a12a29adcb848"
-SRCREV ?= "b22dbcc9173919eaa4bbdeb144abc062f2d5e0fd"
-
-KBRANCH_odroid-c2 ?= "odroidc2-3.14.y"
-#SRCREV_machine_odroid-c2 ?= "6ad167426fbad87ff62af517fc01ad9655a89e18"
-#SRCREV_machine_odroid-c2 ?= "1b4fefdf20a84b17d5b666c0686a12a29adcb848"
-SRCREV_machine_odroid-c2 ?= "b22dbcc9173919eaa4bbdeb144abc062f2d5e0fd"
-
-
 
 KERNEL_DEVICETREE_odroid-c2 = "meson64_odroidc2.dtb"
 
+#KBRANCH ?= "odroidc2-3.14.y-rt"
+#SRCREV ?= "acf6eb161737fcf19dcb689871e782a4b002bb78"
+#KBRANCH_odroid-c2 ?= "odroidc2-3.14.y-rt"
+#SRCREV_machine_odroid-c2 ?= "acf6eb161737fcf19dcb689871e782a4b002bb78"
+#SRC_URI = "git://github.com/moonlinux/linux-moon.git;branch=${KBRANCH}" 
+
+
+KBRANCH ?= "odroidc2-3.14.y"
+SRCREV ?= "b22dbcc9173919eaa4bbdeb144abc062f2d5e0fd"
+KBRANCH_odroid-c2 ?= "odroidc2-3.14.y"
+SRCREV_machine_odroid-c2 ?= "b22dbcc9173919eaa4bbdeb144abc062f2d5e0fd"
 SRC_URI = "git://github.com/hardkernel/linux.git;branch=${KBRANCH}"
+
 
 SRC_URI += " \
 	file://defconfig	\
