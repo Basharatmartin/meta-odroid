@@ -14,9 +14,14 @@ KERNEL_DEVICETREE_odroid-c2 = "meson64_odroidc2.dtb"
 
 
 KBRANCH ?= "odroidc2-3.14.y"
-SRCREV ?= "b22dbcc9173919eaa4bbdeb144abc062f2d5e0fd"
+#SRCREV ?= "b22dbcc9173919eaa4bbdeb144abc062f2d5e0fd"
+SRCREV ?= "c3e4c730feb1750940971cae9ca1da3ca50f1d56"
+BB_GIT_SHALLOW ?= "1"
+BB_GIT_SHALLOW_DEPTH ?= "1"
+
 KBRANCH_odroid-c2 ?= "odroidc2-3.14.y"
-SRCREV_machine_odroid-c2 ?= "b22dbcc9173919eaa4bbdeb144abc062f2d5e0fd"
+#SRCREV_machine_odroid-c2 ?= "b22dbcc9173919eaa4bbdeb144abc062f2d5e0fd"
+SRCREV_machine_odroid-c2 ?= "c3e4c730feb1750940971cae9ca1da3ca50f1d56"
 SRC_URI = "git://github.com/hardkernel/linux.git;branch=${KBRANCH}"
 
 
